@@ -9,8 +9,9 @@ public class DTimeServerThreaded implements Runnable{
     }
 
     public void run(){
+        System.out.println("Accepted a socket");
+        System.out.println("Thread name is " + Thread.currentThread().getName());
         try {
-            System.out.println("Accepted a socket");
             PrintWriter pout = new PrintWriter(client.getOutputStream(), true); // writing
             pout.println(new java.util.Date().toString());
         }
